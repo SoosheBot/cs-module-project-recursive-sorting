@@ -91,11 +91,25 @@ def merge_in_place(arr, start, mid, end):
     return arr
 
 
-# def merge_sort_in_place(arr, l, r):
-#     # Your code here
+def merge_sort_in_place(arr, l, r):
+    # Your code here
+    if l < r:
+        mid = 1 + (r - 1)//2
+
+        merge_sort_in_place(arr, l, mid)
+        merge_sort_in_place(arr, mid + 1, r)
+        merge_in_place(arr, l, mid, r)
 
 
-#     return arr
+# if l < r:
+#         # Same as (l + r)/2, but avoids overflow
+#         # for large l and r
+#         m = l + (r - l)//2
+#         # Sort first and second halves
+#         merge_sort_in_place(arr, l, m)
+#         merge_sort_in_place(arr, m + 1, r)
+#         merge_in_place(arr, l, m, r)
+    return arr
 
 
 # STRETCH: implement the Timsort function below
