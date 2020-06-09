@@ -95,7 +95,7 @@ def merge_sort_in_place(arr, l, r):
     # Your code here
     if l < r:
 
-        m = l + (r-1)//2
+        m = l + (r-l)//2
 
         merge_sort_in_place(arr, l, m)
         merge_sort_in_place(arr, m + 1, r)
